@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <marquee><img src="eba.jpeg" width="400" height="400"><p>Ambassador of Eba Company & CO LTD</p></marquee> 
+    <title>Eba Express</title>
+    <link rel="stylesheet" href="Pizza.css">
+</head>
+
+<body>
+
+<header> Eba Express</header>
+
+<div class="container">
+
+    <div class="pizza-card">
+        <h3>Eba igẹta(3 days eba)</h3>
+        <p>₦3000</p>
+        <button onclick="orderEba('Margherita')">Order</button>
+    </div>
+
+    <div class="pizza-card">
+        <h3>Eba anọ(yesterday's eba)</h3>
+        <p>₦4000</p>
+        <button onclick="orderEba('Pepperoni')">Order</button>
+    </div>
+
+    <div class="pizza-card">
+        <h3>Eba oni(today's eba)</h3>
+        <p>₦4500</p>
+        <button onclick="orderEbaa('BBQ Chicken')">Order</button>
+    </div>
+
+    <div class="form-section">
+        <h2>Delivery Details</h2>
+        <input type="text" id="name" placeholder="Your Name"><br>
+        <input type="text" id="address" placeholder="Delivery Address"><br>
+        <button onclick="placeOrder()">Place Order</button>
+    </div>
+
+</div>
+
+<footer>Fast Delivery 🚀 | Hot & Fresh 🔥</footer>
+
+<script>
+    let selectedPizza = "";
+
+    function orderPizza(pizza) {
+        selectedPizza = pizza;
+        alert(pizza + " selected!");
+    }
+
+    function placeOrder() {
+        let name = document.getElementById("name").value;
+        let address = document.getElementById("address").value;
+
+        if (!selectedPizza || !name || !address) {
+            alert("Please complete your order!");
+        } else {
+            alert("Order placed!\n\nPizza: " + selectedPizza +
+                  "\nName: " + name +
+                  "\nAddress: " + address);
+        }
+    }
+</script>
+
+</body>
+</html>
